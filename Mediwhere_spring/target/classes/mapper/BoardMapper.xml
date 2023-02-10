@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.medi.myapp.BoardDao.BoardRepository">
+
+	<resultMap id ="rsBoardVo" type ="com.medi.myapp.BoardVO.BoardVO">
+		<result property="free_number" column="FREE_NUMBER"/>
+		<result property="free_title" column="FREE_TITLE"/>
+		<result property="free_writer" column="FREE_WRITER"/>
+		<result property="free_pw" column="FREE_PW"/>
+		<result property="free_regdate" column="FREE_REGDATE"/>
+		<result property="free_readcount" column="FREE_READCOUNT"/>
+		<result property="free_content" column="FREE_CONTENT"/>
+	</resultMap>
+
+	<!-- 자유게시판 게시글 목록 조회  -->
+	<select id="selectFreeBoardList" resultMap="rsBoardVo">
+		/* 자유게시판 게시글 목록 조회 */
+        SELECT
+            *
+        FROM FREE_BOARD 
+        ORDER BY FREE_NUMBER DESC
+		
+	</select>
+	
+	<!-- 자유게시판 게시글 등록  -->
+    <insert id="insertFreeBoard" parameterType="BoardVO">
+    	/* 자유게시판 게시글 등록 */
+        INSERT INTO FREE_BOARD
+        VALUES((SELECT NVL(MAX(FREE_NUMBER), 0)+ 1 FROM FREE_BOARD)
+        	  , #{free_title}
+        	  , #{free_writer}
+        	  , #{free_pw}
+        	  , SYSDATE
+        	  , #{free_readcount}
+        	  <!-- , 0 -->
+        	  , #{free_content})
+    </insert>
+    
+    <!-- 자유게시판 게시글 수정  -->
+    <update id="updateFreeBoard" parameterType="BoardVO">
+    	/* 자유게시판 게시글 수정 */
+        UPDATE FREE_BOARD
+           SET FREE_TITLE = #{free_title}
+             , FREE_WRITER = #{free_writer}
+             , FREE_CONTENT = #{free_content}
+         WHERE FREE_NUMBER = #{free_number}
+    </update>
+    
+    <!-- 자유게시판 게시글 조회수 수정  -->
+    <update id="updateFreeBoardReadCount" parameterType="BoardVO">
+    	/* 자유게시판 게시글 조회수 수정 */
+        UPDATE FREE_BOARD
+           SET FREE_READCOUNT = NVL(FREE_READCOUNT, 0)+1
+         WHERE FREE_NUMBER = #{free_number}
+    </update>
+    
+    <!-- 자유게시판 게시글 상세조회  -->
+	<select id="selectFreeBoardDetail" resultMap="rsBoardVo">
+		/* 자유게시판 게시글 상세조회 */
+        SELECT
+            *
+          FROM FREE_BOARD
+         WHERE FREE_NUMBER = #{free_number}
+	</select>
+	
+	<!-- 자유게시판 게시글 삭제  -->
+	<delete id="deleteFreeBoard" parameterType="Integer">
+		/* 자유게시판 게시글 삭제 */
+		DELETE FROM FREE_BOARD
+		 WHERE FREE_NUMBER = #{free_number}
+	</delete>
+
+    <!-- id명은 BoardDAO 클래스의 method명과 똑같이 설정 -->
+    <select id="boardList" resultType="BoardVO">
+        /* 게시글 목록 */
+        SELECT
+            *
+        FROM boards a
+        ORDER BY a.board_number desc
+        OFFSET #{start} ROWS FETCH NEXT #{size} ROWS ONLY
+    </select>
+
+    <select id="boardDetail" resultType="BoardVO">
+        /* 게시글 조회 */
+        SELECT
+            *
+        FROM boards a
+        WHERE board_num = #{boardNum}
+    </select>
+
+    <insert id="board" parameterType="BoardVO">
+        /* 게시판 글쓰기 */
+        INSERT
+            INTO boards(title , content , writer)
+        VALUES (#{title},#{content} ,#{writer})
+    </insert>
+    
+    
+    	<!-- 자유게시판 댓글 등록  -->
+    <insert id="insertComment" parameterType="CommentVO">
+        /* 자유게시판 댓글 등록 */
+        INSERT INTO FREE_COMMENT (comment_no, free_number, parent_no, writer, regdate, content, depth)
+        VALUES(
+           comment_seq.NEXTVAL
+             , #{free_number}
+             , #{parent_no}
+             , #{writer}
+             , SYSDATE
+             , #{content}
+             , #{depth}
+             )
+    </insert>
+    
+    	<!-- 자유게시판 댓글 목록 조회  -->
+	<select id="commentList" parameterType="int" resultType="CommentVO">
+		   /* 자유게시판 댓글 목록 조회 */
+        SELECT *
+        FROM FREE_COMMENT
+        where FREE_NUMBER = #{free_number}
+            start with PARENT_NO = 0
+        connect by prior COMMENT_NO = PARENT_NO
+        order siblings by REGDATE desc
+	</select>
+	
+</mapper>

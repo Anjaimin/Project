@@ -1,0 +1,276 @@
+* {
+  margin: 0;    /* 마진값 초기화 */
+  padding: 0;   /* 패딩값 초기화 */
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;    /* 텍스트 밑줄 제거 */
+}
+ul {
+  list-style: none;     /* 토글 제거 */
+}
+div {
+  display: block;
+}
+
+#container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 헤더 영역 */
+header {
+  border-bottom: 1px solid rgb(199, 199, 199);
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav {
+  height: 80px;
+
+}
+
+nav .logo {
+  float: left;
+  height: auto;
+  margin-left: 30px;
+  margin-right: 100px;
+  padding: 23px 0 0 0;
+}
+nav > .logo h1 {
+  width: auto;
+  font-family: NanumSquareNeo_4;
+  font-size: 30px;
+  color: rgb(39, 9, 73);
+  padding: 0px 0px 0px 46px;
+}
+nav > .logo img {
+  position: absolute;
+  width: 36px;
+  margin-top: 1.5px;
+}
+
+
+
+#gnb {
+  float: left;
+  width: 400px;
+  height: 80px;
+  line-height: 80px; 
+}
+#gnb ul {
+  display: inline-block;
+}
+#gnb ul li {
+  float: left;
+}
+#gnb li > a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 0px 20px;
+  font-family: NanumSquareNeo_3;
+  font-size: 20px;
+}
+#gnb li > a:hover {
+  color: rgb(98, 190, 126);
+  font-family: NanumSquareNeo_4;
+}
+
+
+#lnb {
+  float: right;
+  right: 30px;
+  height: 80px;
+  line-height: 80px;
+  padding: 0;
+  
+}
+#lnb ul {
+  display: inline-block;
+}
+#lnb ul li {
+  float: left;
+}
+#lnb li > a {
+  display: block;
+  color: rgb(110, 110, 110);
+  padding: 0px 20px;
+  font-family: NanumSquareNeo_3;
+  font-size: 15px;
+}
+#lnb li > a:hover {
+  color: rgb(98, 190, 126);
+  font-family: NanumSquareNeo_4;
+}
+
+.ban_img {
+  display: block;
+  height: 650px;
+  width: 100%;
+  background-image: url('/PROJECT/images/Main_benner_dark.jpg');
+  background-position:50% 70%;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.ban_img .ban_text{
+  position: relative;
+  left: 40px;
+  top: 370px;
+  font-family: NanumSquareNeo_3;
+  color: rgb(255, 255, 255);             
+  line-height: 1.3;
+  text-shadow: 1px black;
+}
+.ban_img .ban_text h1 {
+  font-family: NanumSquareNeo_4;
+  font-size: 70px;
+}
+.ban_img .ban_text h2 {
+  font-size: 50px;
+}
+
+
+#section1 {
+  width: 100%;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+}
+
+#section1 .block1 {
+  float: left;
+  font-family: NanumSquareNeo_2;
+  margin-top: 210px;
+}
+
+#section1 .block1 h3 {
+  font-size: 1.8em;
+  line-height: 1.4;
+}
+#section1 .block1 h4 {
+  font-size: 1.1em;
+  line-height: 1.4;
+  color: rgb(71, 136, 73);
+  font-family: NanumSquareNeo_3;
+}
+
+#section1  img {
+  width: 770px;
+  margin: 100px 0 0 50px;
+}
+
+#section2 {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(241, 241, 241);
+  font-family: NanumSquareNeo_2;
+  text-align: center;
+  line-height: 1.4;
+}
+#section2 h2 {
+  font-size: 2.1em;
+  font-family: NanumSquareNeo_4;
+}
+#section2 h3 {
+  font-size: 1.8em;
+  line-height: 1.6;
+}
+#section2 h4 {
+  font-size: 0.9em;
+  color: rgb(182, 182, 182);
+  font-family: NanumSquareNeo_3;
+}
+#section2 h5 {
+  font-size: 1.5em;
+  font-family: NanumSquareNeo_3;
+}
+
+#section2 .box {
+  width: 1000px;
+  height: 450px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+#section2 img {
+  width: 700px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+  
+
+
+
+
+
+footer {
+  
+  width: 100%;
+  height: 110px;
+  color: gray;
+}
+
+.bottom {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  font-family: NanumSquareNeo_3;
+
+}
+.bottom > ul {
+  margin-top: 15px;
+}
+.bottom  ul li {
+  float: left;
+  padding: 5px 20px;
+  border-right: 1px solid #ddd;
+
+}
+.bottom ul li:last-child {
+  border-right: none;
+}
+.bottom ul li a, .bottom ul li a:visited {
+  font-size: 15px;
+  color: gray;
+}
+#company {
+  clear: both;
+  margin-top: 25px;  
+  margin-left: 20px;
+}
+#company p {
+  font-family: NanumSquareNeo_3;
+  font-size: 13px;
+  line-height: 1.5em;
+}
+
+
+
+
+/* 폰트 영역 */
+@font-face {
+  font-family: 'NanumSquareNeo_4';
+  src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-dEb.woff2) format('woff2'),
+       url(/PROJECT/fonts/woff/NanumSquareNeoTTF-dEb.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo_3';
+  src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-cBd.woff2) format('woff2'),
+       url(/PROJECT/fonts/woff/NanumSquareNeoTTF-cBd.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo_2';
+  src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-bRg.woff2) format('woff2'),
+       url(/PROJECT/fonts/woff/NanumSquareNeoTTF-bRg.woff) format('woff');
+}

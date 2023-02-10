@@ -1,0 +1,133 @@
+* {
+  margin: 0;    /* 마진값 초기화 */
+  padding: 0;   /* 패딩값 초기화 */
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;    /* 텍스트 밑줄 제거 */
+}
+ul {
+  list-style: none;     /* 토글 제거 */
+}
+div {
+  display: block;
+}
+
+
+
+/* 헤더 영역 */
+header {
+  position: absolute;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  background-color: rgb(255, 255, 255);
+  position: fixed; 
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav {
+  height: 60px;
+  width: 2000px;
+  margin: 0 auto;
+}
+nav .logo {
+  float: left;
+  position: absolute;
+  height: auto;
+  left: 30px;
+  margin-left: 30px;
+  margin-right: 100px;
+  padding: 11px 0 0 0;
+}
+nav > .logo h1 {
+  width: auto;
+  font-family: NanumSquareNeo_4;
+  font-size: 30px;
+  color: rgb(39, 9, 73);
+  padding: 0px 0px 0px 46px;
+}
+nav > .logo img {
+  position: absolute;
+  width: 36px;
+  margin-top: 1.5px;
+}
+
+#gnb {
+  float: left;
+  position: absolute;
+  left: 300px;
+  width: 400px;
+  height: 60px;
+  line-height: 60px; 
+}
+#gnb ul {
+  display: inline-block;
+}
+#gnb ul li {
+  float: left;
+}
+#gnb li > a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 0px 20px;
+  font-family: NanumSquareNeo_3;
+  font-size: 20px;
+}
+#gnb li > a:hover {
+  color: rgb(98, 190, 126);
+  font-family: NanumSquareNeo_4;
+}
+
+#lnb {
+  float: right;
+  position: absolute;
+  right: 30px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
+}
+#lnb ul {
+  display: inline-block;
+}
+#lnb ul li {
+  float: left;
+}
+#lnb li > a {
+  display: block;
+  color: rgb(110, 110, 110);
+  padding: 0px 20px;
+  font-family: NanumSquareNeo_3;
+  font-size: 15px;
+}
+#lnb li > a:hover {
+  color: rgb(98, 190, 126);
+  font-family: NanumSquareNeo_4;
+}
+
+#container {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+}
+
+
+/* 폰트 영역 */
+@font-face {
+  font-family: 'NanumSquareNeo_4';
+  src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-dEb.woff2) format('woff2'),
+       url(/PROJECT/fonts/woff/NanumSquareNeoTTF-dEb.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo_3';
+  src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-cBd.woff2) format('woff2'),
+       url(/PROJECT/fonts/woff/NanumSquareNeoTTF-cBd.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo_2';
+  src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-bRg.woff2) format('woff2'),
+       url(/PROJECT/fonts/woff/NanumSquareNeoTTF-bRg.woff) format('woff');
+}

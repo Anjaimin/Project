@@ -1,0 +1,584 @@
+* {
+    margin: 0;    /* 마진값 초기화 */
+    padding: 0;   /* 패딩값 초기화 */
+    box-sizing: border-box;
+    font-family: NanumSquareNeo_3;
+  }
+  a {
+    text-decoration: none;    /* 텍스트 밑줄 제거 */
+  }
+  ul {
+    list-style: none;     /* 토글 제거 */
+  }
+  div {
+    display: block;
+  }
+  
+  #container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* 헤더 영역 */
+header {
+  border-bottom: 1px solid rgb(199, 199, 199);
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav {
+  height: 80px;
+
+}
+
+nav .logo {
+  float: left;
+  height: auto;
+  margin-left: 30px;
+  margin-right: 100px;
+  padding: 23px 0 0 0;
+}
+nav > .logo h1 {
+  width: auto;
+  font-family: NanumSquareNeo_4;
+  font-size: 30px;
+  color: rgb(39, 9, 73);
+  padding: 0px 0px 0px 46px;
+}
+nav > .logo img {
+  position: absolute;
+  width: 36px;
+  margin-top: 1.5px;
+}
+
+
+/* 배너 수정 */
+
+#gnb {
+  float: left;
+  height: 80px;
+  line-height: 80px; 
+  margin-right: 10px;
+  font-family: NanumSquareNeo_4;
+}
+
+#gnb li {
+  float:left;  /* 메뉴 항목을 왼쪽으로 플로팅 */ 
+  position: relative;  /* 서브 메뉴를 absolute로 하기 위해, 이 부분을 relative로 */ 
+  
+}
+
+#gnb > li {
+  width: 150px;
+  text-align: center;
+}
+
+#gnb li a {
+  display: block;
+  padding: 0px 0px;
+  color: rgb(0, 0, 0);
+  font-family: NanumSquareNeo_3;
+  font-size: 20px;
+  text-align: center;
+}
+
+#gnb li a:hover {
+  color:  rgb(80, 9, 160);
+  font-family: NanumSquareNeo_4;
+}
+
+#gnb li ul { /* 서브 메뉴 스타일 */
+  display: none;  /* 서브 메뉴 처음에는 화면에 안 보이게 */ 
+  position: absolute;  /* 서브 메뉴 포지셔닝 */
+  background:rgba(255,255,255);  /* 슬라이드 쇼 비치도록 배경 색 조절 */
+  text-align: center;
+  line-height: 30px;
+  background-color: rgb(243, 243, 243);
+  
+  
+}
+
+#gnb > li > ul > li > a { 
+  font-size:18px;
+  width: 150px;
+  height: 40px;  
+  padding: 0;
+  margin: 0;
+  color:#000;  
+}
+
+#gnb > li:hover > ul {
+  display: block;  /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
+  z-index:10;  /* 슬라이드 쇼에 가리지 않게 조절 */ 
+  padding-top: 10px;
+}
+
+
+
+
+
+
+
+#lnb {
+  float: right;
+  right: 20px;
+  height: 80px;
+  line-height: 80px;
+  padding: 0;
+}
+
+.gnb span {
+  margin-top: 0px;
+}
+
+.icon {
+  width: auto;
+  font-size: 400px;
+  padding-top: 20px;
+}
+
+#lnb ul {
+  display: inline-block;
+}
+
+#lnb ul img{
+  display: inline-block;  
+  
+  /* float: auto; */
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  /* margin : auto; */
+}
+#lnb ul li {
+  float: left;
+  padding-right: 0px;
+}
+#lnb ul > a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 0px 20px;
+  font-family: NanumSquareNeo_3;
+  font-size: 17px;
+}
+#lnb ul > a:hover {
+  color: rgb(39, 9, 73);
+  font-family: NanumSquareNeo_4;
+}
+
+
+
+html{
+    font-size: 10px;
+}
+
+
+ul li{
+    list-style: none;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.board_wrap{
+    
+    padding-top: 140px;  
+    margin: auto;
+    margin-top: 100px auto;
+    width: 1150px;
+    
+}
+
+.board_title{
+    margin-top: 50px auto;
+    margin-bottom: 20px;
+}
+
+
+.board_title strong{
+  font-size: 3.3rem;
+  font-family: NanumSquareNeo_4;
+}
+
+.board_title p{
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap a{
+    display: inline-block;
+    min-width: 88px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid rgb(39, 9, 73);
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap a :first-child{
+    margin-left: 0;
+}
+
+.bt_wrap a.on{
+    background: rgb(39, 9, 73);
+    color: #fff;
+}
+
+
+.board_list{
+    width: 100%;
+    border-top: 2px solid #999;
+    padding-top: 100px;
+    
+}
+
+.board_list > div{
+    border-bottom: 1px solid #ddd;
+    font-size:0;
+}
+
+.board_list > div.top{
+    border-bottom: 1px solid #999;
+}
+
+.board_list > div:last-child{
+    border-bottom: 1px solid rgb(39, 9, 73);
+}
+/* 각각의 칸을 뜻함 */
+.board_list > div > div{
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.board_list > div.top > div{
+    font-weight: 600;
+}
+
+
+.board_list .num{
+    width: 10%;
+    
+}
+
+.board_list .title{
+    width: 80%;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.board_list .top .title{
+    text-align: center;
+}
+
+
+.board_list .date{
+    width: 15%;
+}
+
+
+/* 222222222222 */
+
+.board_wrap2{
+    float: left;
+    width: 550px;
+    margin-left: 390px;
+    
+}
+
+.board_title2{
+    margin-bottom: 20px;
+}
+
+
+.board_title2 strong{
+    font-size: 4rem;
+    font-family: NanumSquareNeo_4;
+}
+
+.board_title2 p{
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap2{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap2 a{
+    display: inline-block;
+    min-width: 88px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid rgb(39, 9, 73);
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap2 a :first-child{
+    margin-left: 0;
+}
+
+.bt_wrap2 a.on{
+    background: rgb(39, 9, 73);
+    color: #fff;
+}
+
+
+.board_list2{
+    width: 100%;
+    border-top: 2px solid #999;
+}
+
+.board_list2 > div{
+    border-bottom: 1px solid #ddd;
+    font-size:0;
+}
+
+.board_list2 > div.top{
+    border-bottom: 1px solid #999;
+}
+
+.board_list2 > div:last-child{
+    border-bottom: 1px solid rgb(39, 9, 73);
+}
+/* 각각의 칸을 뜻함 */
+.board_list2 > div > div{
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.board_list2 > div.top > div{
+    font-weight: 600;
+}
+
+
+.board_list2 .title2{
+    width: 80%;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.board_list2 .top .title2{
+    text-align: center;
+}
+
+
+.board_list2 .date2{
+    width: 15%;
+}
+
+
+
+/* 333333333333 */
+
+.board_wrap3{
+    float: left;
+    width: 550px;
+    margin-left: 50px;
+    
+}
+
+.board_title3{
+    margin-bottom: 20px;
+}
+
+
+.board_title3 strong{
+  font-size: 3.3rem;
+  font-family: NanumSquareNeo_4;
+    
+}
+
+.board_title3 p{
+    margin-top: 5px;
+    font-size: 1.4rem;
+    
+}
+
+.bt_wrap3{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap3 a{
+    display: inline-block;
+    min-width: 88px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid rgb(39, 9, 73);
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap3 a :first-child{
+    margin-left: 0;
+}
+
+.bt_wrap3 a.on{
+    background: rgb(39, 9, 73);
+    color: #fff;
+}
+
+
+.board_list3{
+    width: 100%;
+    height: 195px;
+    border : 2px solid #999;
+    font-size: 15px;
+        
+}
+
+.board_list3 p{
+    margin: 5px 15px;
+    font-family: NanumSquareNeo_3;
+}
+
+
+.board_list3 h2{
+    margin: 2rem 15px 1rem;
+    font-family: NanumSquareNeo_3;
+    font-size: 2.5rem;
+    font-weight: 10;
+}
+
+.board_list3 h3{
+    margin: 4rem 15px 1rem;
+    font-family: NanumSquareNeo_3;
+    font-size: 2.5rem;
+    font-weight: 10;
+    color: blue;
+}
+
+
+.board_list3 > div{
+    
+    font-size:0;
+}
+
+
+
+/* 각각의 칸을 뜻함 */
+.board_list3 > div > div{
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.board_list3 > div.top > div{
+    font-weight: 600;
+}
+
+
+.board_list3 .title3{
+    width: 80%;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.board_list3 .top .title3{
+    text-align: center;
+}
+
+
+.board_list3 .date3{
+    width: 15%;
+}
+
+.board_list .wrap3 .box{
+    border-radius: 20px solid #999;
+
+}
+
+
+
+footer {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: gray;
+  }
+  
+  .bottom {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    font-family: NanumSquareNeo_3;
+  
+  }
+  .bottom > ul {
+    margin-top: 15px;
+  }
+  .bottom  ul li {
+    float: left;
+    padding: 5px 20px;
+    border-right: 1px solid #ddd;
+  
+  }
+  .bottom ul li:last-child {
+    border-right: none;
+  }
+  .bottom ul li a, .bottom ul li a:visited {
+    font-size: 15px;
+    color: gray;
+  }
+  #company {
+    clear: both;
+    margin-top: 25px;  
+    margin-left: 20px;
+  }
+  #company p {
+    font-family: NanumSquareNeo_3;
+    font-size: 13px;
+    line-height: 1.5em;
+  }
+
+
+
+
+  
+
+@font-face {
+    font-family: 'NanumSquareNeo_4';
+    src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-dEb.woff2) format('woff2'),
+         url(/PROJECT/fonts/woff/NanumSquareNeoTTF-dEb.woff) format('woff');
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareNeo_3';
+    src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-cBd.woff2) format('woff2'),
+         url(/PROJECT/fonts/woff/NanumSquareNeoTTF-cBd.woff) format('woff');
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareNeo_2';
+    src: url(/PROJECT/fonts/woff2/NanumSquareNeoTTF-bRg.woff2) format('woff2'),
+         url(/PROJECT/fonts/woff/NanumSquareNeoTTF-bRg.woff) format('woff');
+  }
+
+  
