@@ -2,7 +2,7 @@ package com.medi.myapp.BoardDao;
 
 import java.util.List;
 
-import com.medi.myapp.BoardVO.BoardVO;
+import com.medi.myapp.vo.BoardVO;
 import com.medi.myapp.vo.CommentVO;
 
 public interface BoardRepository {

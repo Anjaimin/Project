@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.medi.myapp.MemberDao.MemberRepository;
 import com.medi.myapp.MemberService.MemberService;
-import com.medi.myapp.MemberVO.MemberVO;
+import com.medi.myapp.vo.MemberVO;
 
 @Service("MemberService")
 public class MemberServiceImpl implements MemberService{

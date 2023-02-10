@@ -3,7 +3,7 @@ package com.medi.myapp.Controller;
 import java.util.Locale;
 import java.util.List;
 
-import com.medi.myapp.BoardVO.BoardVO;
+import com.medi.myapp.vo.BoardVO;
 import com.medi.myapp.vo.CommentVO;
 
 import javax.annotation.Resource;

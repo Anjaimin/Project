@@ -2,7 +2,7 @@ package com.medi.myapp.MemberService;
 
 import java.util.List;
 
-import com.medi.myapp.MemberVO.MemberVO;
+import com.medi.myapp.vo.MemberVO;
 
 public interface MemberService{
 	public void insertMember(MemberVO membervo);

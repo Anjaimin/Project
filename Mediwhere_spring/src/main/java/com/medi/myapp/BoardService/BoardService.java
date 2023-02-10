@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.medi.myapp.BoardVO.BoardVO;
+import com.medi.myapp.vo.BoardVO;
 import com.medi.myapp.vo.CommentVO;
 
 public interface BoardService {

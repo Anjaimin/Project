@@ -2,7 +2,7 @@ package com.medi.myapp.MemberDao;
 
 import java.util.List;
 
-import com.medi.myapp.MemberVO.MemberVO;
+import com.medi.myapp.vo.MemberVO;
 
 
 public interface MemberRepository {

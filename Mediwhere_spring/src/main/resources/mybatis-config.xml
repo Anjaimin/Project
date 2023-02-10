@@ -5,8 +5,8 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias alias="BoardVO" type="com.medi.myapp.BoardVO.BoardVO"/>
-		<typeAlias alias="MemberVO" type="com.medi.myapp.MemberVO.MemberVO"/>
+		<typeAlias alias="BoardVO" type="com.medi.myapp.vo.BoardVO"/>
+		<typeAlias alias="MemberVO" type="com.medi.myapp.vo.MemberVO"/>
 		<typeAlias alias="CommentVO" type="com.medi.myapp.vo.CommentVO"/>
 	</typeAliases>
 </configuration>

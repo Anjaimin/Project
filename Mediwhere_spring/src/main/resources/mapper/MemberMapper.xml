@@ -3,7 +3,7 @@
 
 <mapper namespace="com.medi.myapp.MemberDao.MemberRepository">
 
-	<resultMap id ="rsMemberVO" type ="com.medi.myapp.MemberVO.MemberVO">
+	<resultMap id ="rsMemberVO" type ="com.medi.myapp.vo.MemberVO">
 		<result property="userid" column="USERID"/>
 		<result property="password" column="PASSWORD"/>
 		<result property="name" column="NAME"/>

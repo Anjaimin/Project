@@ -22,10 +22,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.medi.myapp.BoardVO.BoardVO;
 import com.medi.myapp.MemberDao.MemberRepository;
 import com.medi.myapp.MemberService.MemberService;
-import com.medi.myapp.MemberVO.MemberVO;
+import com.medi.myapp.vo.BoardVO;
+import com.medi.myapp.vo.MemberVO;
 
 @Controller
 public class MemberController {

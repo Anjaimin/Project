@@ -5,7 +5,7 @@
 
 <mapper namespace="com.medi.myapp.BoardDao.BoardRepository">
 
-	<resultMap id ="rsBoardVo" type ="com.medi.myapp.BoardVO.BoardVO">
+	<resultMap id ="rsBoardVo" type ="com.medi.myapp.vo.BoardVO">
 		<result property="free_number" column="FREE_NUMBER"/>
 		<result property="free_title" column="FREE_TITLE"/>
 		<result property="free_writer" column="FREE_WRITER"/>

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.medi.myapp.BoardDao.BoardRepository;
 import com.medi.myapp.BoardService.BoardService;
-import com.medi.myapp.BoardVO.BoardVO;
+import com.medi.myapp.vo.BoardVO;
 import com.medi.myapp.vo.CommentVO;
 
 @Service("boardService")

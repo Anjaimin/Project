@@ -1,4 +1,4 @@
-package com.medi.myapp.MemberVO;
+package com.medi.myapp.vo;
 
 import java.sql.Date;
 

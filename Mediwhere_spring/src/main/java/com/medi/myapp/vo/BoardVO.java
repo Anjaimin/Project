@@ -1,4 +1,4 @@
-package com.medi.myapp.BoardVO;
+package com.medi.myapp.vo;
 
 import java.sql.Date;
 import java.time.LocalDate;
